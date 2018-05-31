@@ -70,6 +70,7 @@ h1,h2,h3,h4,h5,h6,h7{
     float: left;
     margin-left: 17px;
     margin-right: 17px;
+    position: relative;
 }
 
 .topNavBar nav > ul > li > a {
@@ -93,6 +94,31 @@ h1,h2,h3,h4,h5,h6,h7{
     left: 0;
     background: #e06567;
     height: 3px;
+    animation: menuSlide 0.3s;
+}
+
+@keyframes menuSlide{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.topNavBar .submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.topNavBar .submenu .active{
+    display: block;
+}
+
+.topNavBar .submenu > li{
+    white-space: nowrap;
 }
 
 .topNavBar .logo{
